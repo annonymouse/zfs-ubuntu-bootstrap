@@ -15,7 +15,7 @@ fi
 parted $rootdisk print
 
 parted -s $rootdisk mktable msdos
-parted -s $rootdisk mkpart primary 52 4MB 260MB
+parted -s $rootdisk mkpart primary ext2 4MB 260MB
 parted -s $rootdisk mkpart primary ext2 261MB "100%"
 
 parted -s $rootdisk set 1 boot on
